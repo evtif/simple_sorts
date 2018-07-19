@@ -12,7 +12,7 @@ function quickSort(inputArray) {
     for (let i = 1; i < number; i++) {
         if (inputArray[i] < instance) {
             array_1.push(inputArray[i]);
-        }
+        } 
         else {
             array_2.push(inputArray[i]);
         }
