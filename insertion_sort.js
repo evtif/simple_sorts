@@ -1,4 +1,4 @@
-const notSortedArray = require('./create_array')(10000);
+const notSortedArray = require('./create_array')(10);
 const notSortedArray_2 = [...notSortedArray];
 
 // Start sorting array process
@@ -7,17 +7,16 @@ const number = notSortedArray.length;
 
 for (let i = 0; i < number; i++) {
     let instance = notSortedArray[i];
-    // let j = i - 1;
-    // while (j >= 0 && notSortedArray[j] > instance) { 
-    //     notSortedArray[j + 1] = notSortedArray[j];
-    //     j--; 
-    // }
-    let j;
-    for (j = i - 1; j >= 0 && notSortedArray[j] > instance; j--) { 
-        notSortedArray[j + 1] = notSortedArray[j]; 
+    let j = i - 1;
+
+    while (j >= 0 && notSortedArray[j] > instance) { 
+        notSortedArray[j + 1] = notSortedArray[j];
+        j--; 
     }
+
     notSortedArray[j + 1] = instance;
 }
+
 console.timeEnd('insertion sort process with loop');
 
 // Start sorting array process by native sort method
